@@ -682,7 +682,7 @@
   .browse-root {
     display: flex;
     flex-direction: column;
-    height: calc(100vh - var(--app-header-h));
+    height: calc(100vh - var(--app-header-h) - var(--jj-chrome-h, 0px));
   }
 
   .browse-topbar {

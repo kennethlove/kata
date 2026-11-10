@@ -2587,7 +2587,7 @@
      * App.svelte's ResizeObserver so this stays correct as the
      * second row appears / disappears. */
     position: sticky;
-    top: var(--app-header-h);
+    top: calc(var(--app-header-h) + var(--jj-chrome-h, 0px));
     z-index: 10;
   }
 
