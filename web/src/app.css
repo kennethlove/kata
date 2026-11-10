@@ -149,7 +149,7 @@ header.app {
   border-bottom: 1px solid var(--border);
   background: var(--bg-panel);
   position: sticky;
-  top: 0;
+  top: var(--jj-chrome-h, 0px);
   z-index: 30;
   /* Force a clean stacking + compositing context. iOS Safari has a
    * well-known quirk where `position: sticky` + `z-index` doesn't

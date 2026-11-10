@@ -4046,8 +4046,8 @@
   .tree-pane {
     flex: 0 0 auto;
     position: sticky;
-    top: calc(var(--app-header-h) + 16px);
-    max-height: calc(100vh - var(--app-header-h) - 32px);
+    top: calc(var(--app-header-h) + var(--jj-chrome-h, 0px) + 16px);
+    max-height: calc(100vh - var(--app-header-h) - var(--jj-chrome-h, 0px) - 32px);
     /* Match the CommitsPanel's 16px top margin so the two panels align
      * along their top edges before sticky kicks in. */
     margin-top: 16px;
@@ -4084,7 +4084,7 @@
      * resizer is overridden here. */
     .tree-pane {
       position: fixed;
-      top: var(--app-header-h);
+      top: calc(var(--app-header-h) + var(--jj-chrome-h, 0px));
       left: 0;
       bottom: 0;
       margin: 0;
@@ -4108,7 +4108,7 @@
     .tree-backdrop {
       display: block;
       position: fixed;
-      inset: var(--app-header-h) 0 0 0;
+      inset: calc(var(--app-header-h) + var(--jj-chrome-h, 0px)) 0 0 0;
       /* Darker than a typical scrim — the file-tree drawer is a
        * light panel and at 0.35 the dimmed diff behind it stayed
        * bright enough that the drawer didn't read as modal. */
@@ -4145,7 +4145,7 @@
    * box above it. */
   .panel-toggle {
     position: sticky;
-    top: calc(var(--app-header-h) + 24px);
+    top: calc(var(--app-header-h) + var(--jj-chrome-h, 0px) + 24px);
     align-self: flex-start;
     flex: 0 0 16px;
     width: 16px;
@@ -4187,8 +4187,8 @@
     flex: 0 0 6px;
     cursor: col-resize;
     position: sticky;
-    top: calc(var(--app-header-h) + 16px);
-    height: calc(100vh - var(--app-header-h) - 32px);
+    top: calc(var(--app-header-h) + var(--jj-chrome-h, 0px) + 16px);
+    height: calc(100vh - var(--app-header-h) - var(--jj-chrome-h, 0px) - 32px);
     background: transparent;
     margin: 0 4px;
   }
